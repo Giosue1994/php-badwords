@@ -9,11 +9,13 @@
 
   // ottengo l'argomento passato all'url
   $badword = $_GET['badword'];
-
-  /* cambio l'argomento ottenuto con '***' utilizzando
+  $new_word = '***';
+  /* cambio l'argomento ottenuto con una nuova parola utilizzando
   str_replace(porzione da modificare, con cosa modificare, sringa dell'elemento da modificare) */
-  $badword_change = str_replace($badword, '***', $testo);
-
-  // stampo su schermo il testo modificato
-  var_dump($badword_change);
+  $badword_change = str_replace($badword, $new_word, $testo);
+  $text_length = strlen($badword_change);
 ?>
+
+<h1><?php echo $badword_change ?></h1>
+
+<h2>Lunghezza testo: <?php echo $text_length ?> parole</h2>
